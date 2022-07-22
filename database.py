@@ -48,7 +48,7 @@ def print_workers():
         print(person)
 
 
-def print__(list_of_people):
+def print_list(list_of_people):
     for element in list_of_people:
         print(element)
 
@@ -61,13 +61,13 @@ def print_join():
             list_of_people = sql.execute(
                 "SELECT * FROM People INNER JOIN Workers ON people.age = workers.age"
             )
-            print__(list_of_people)
+            print_list(list_of_people)
         if n == 2:
             print('Left Outer Join:')
             list_of_people = sql.execute(
                 "SELECT * FROM People INNER JOIN Workers ON people.age = workers.age"
             )
-            print__(list_of_people)
+            print_list(list_of_people)
         else:
             break
 
